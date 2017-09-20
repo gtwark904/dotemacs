@@ -1,3 +1,5 @@
+;;; init.el --- The first thing GNU Emacs runs
+
 ;; Throw temp files into the system $TEMPDIR
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
