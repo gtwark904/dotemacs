@@ -1,5 +1,12 @@
 ;;; init.el --- The first thing GNU Emacs runs
 
+;; Do NOT run garbage collection during startup!
+;; We do this by setting the value insanely high. 
+;; NOTE: This is reverted at the end of the file.
+(setq gc-cons-threshold 999999999)
+(message "gc-cons-threshold temporarily set to %S"
+	 gc-cons-threshold)
+
 ;; Throw temp files into the system $TEMPDIR
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -16,5 +23,8 @@
 (setq inhibit-startup-message t)        ; We must disable the startup message
 					; for this to work as desired.
 
-
-
+;; Revert garbage colletion behaviour back to a more normal, modern value
+(run-with-idle-timer 5 nil (lambda ()
+			     (setq gc-cons-threshold 200000)
+			     (message "gc-cons-threshold restored to %S"
+				      gc-cons-threshold)))
