@@ -11,6 +11,15 @@
 ;; NOTE: This drastically improves `emacs-init-time'
 (let ((file-name-handler-alist nil)) 
 
+  ;; TODO: Make this platform independent 
+  ;; Set up package.el for use with MELPA
+  (require 'package)
+  (setq package-enable-at-startup nil)
+  (add-to-list 'package-archives
+	       '("melpa" . "http://melpa.org/packages/") t)
+  (package-initialize)
+  
+  
   ;; Throw temp files into the system $TEMPDIR
   (setq backup-directory-alist
 	`((".*" . ,temporary-file-directory)))
