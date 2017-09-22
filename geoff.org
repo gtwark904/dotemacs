@@ -1,7 +1,16 @@
+#+TITLE: geoff.org --- My personal GNU Emacs configuration
+#+DATE: <2017-09-21 Thu>
+#+AUTHOR: Geoff T. Wark
 
+
+
+* First Things First
+** Move =custom-file=
+
+This prevents customization settings from appending to [[file:init.el][init.el]]
 
 #+BEGIN_SRC emacs-lisp
   ;; TODO: Make this less absolute
   (setq custom-file "~/.emacs.d/custom.el")
-  (load custom-file :noerror)
+  (load custom-file :noerror) ; We do NOT care if this file exists
 #+END_SRC
