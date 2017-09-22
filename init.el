@@ -18,6 +18,16 @@
   (add-to-list 'package-archives
 	       '("melpa" . "http://melpa.org/packages/") t)
   (package-initialize)
+
+  ;; Bootstrap use-package
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+  ;; Reduce load time
+  (eval-when-compile
+    (require 'use-package))
+  (require 'diminish) ; used to hide modeline strings
+  (require 'bind-key) ; simplifies how you set keybindings
   
   
   ;; Throw temp files into the system $TEMPDIR
