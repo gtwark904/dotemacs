@@ -1,0 +1,7 @@
+
+
+#+BEGIN_SRC emacs-lisp
+  ;; TODO: Make this less absolute
+  (setq custom-file "~/.emacs.d/custom.el")
+  (load custom-file :noerror)
+#+END_SRC

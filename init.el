@@ -28,6 +28,10 @@
     (require 'use-package))
   (require 'diminish) ; used to hide modeline strings
   (require 'bind-key) ; simplifies how you set keybindings
+
+  ;; TODO: Make this less absolute
+  ;; Load the rest of my configuration
+  (org-babel-load-file "~/.emacs.d/geoff.org")
   
   
   ;; Throw temp files into the system $TEMPDIR
