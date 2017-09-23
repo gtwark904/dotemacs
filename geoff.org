@@ -14,3 +14,22 @@ This prevents customization settings from appending to [[file:init.el][init.el]]
   (setq custom-file "~/.emacs.d/custom.el")
   (load custom-file :noerror) ; We do NOT care if this file exists
 #+END_SRC
+
+** Throw temp files into the system $TEMPDIR
+
+#+BEGIN_SRC emacs-lisp
+  (setq backup-directory-alist
+        `((".*" . ,temporary-file-directory)))
+  (setq auto-save-file-name-transforms
+        `((".*" ,temporary-file-directory t)))
+#+END_SRC
+
+** Set default directory
+
+TODO: Make this platform independent 
+
+#+BEGIN_SRC emacs-lisp
+  (cd (concat "c:/Users/" user-login-name "/"))
+  (setq inhibit-startup-message t)      ; We must disable the startup message
+                                        ; for this to work as desired.
+#+END_SRC
