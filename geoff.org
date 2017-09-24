@@ -50,3 +50,18 @@ TODO: does this work for Emacs Daemon?
 #+BEGIN_SRC emacs-lisp
   (set-default-font "Liberation Mono")
 #+END_SRC
+
+** Cursor
+
+Stop the damn blinking!
+
+#+BEGIN_SRC emacs-lisp
+  (blink-cursor-mode -1)
+#+END_SRC
+
+Make it red so it catches the eye.
+
+#+BEGIN_SRC emacs-lisp
+  ;; TODO: does this work for Emacs Daemon?
+  (set-cursor-color "red")
+#+END_SRC
