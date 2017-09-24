@@ -65,3 +65,11 @@ Make it red so it catches the eye.
   ;; TODO: does this work for Emacs Daemon?
   (set-cursor-color "red")
 #+END_SRC
+
+** Face
+
+Italicize comments.
+
+#+BEGIN_SRC emacs-lisp
+  (make-face-italic 'font-lock-comment-face)
+#+END_SRC
