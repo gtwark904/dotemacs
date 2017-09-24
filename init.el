@@ -1,5 +1,11 @@
 ;;; init.el --- The first thing GNU Emacs runs
 
+;; Free up screen real estate
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
+
 ;; Do NOT run garbage collection during startup!
 ;; We do this by setting the value insanely high. 
 ;; NOTE: This is reverted at the end of the file.
