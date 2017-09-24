@@ -28,6 +28,8 @@
     (require 'use-package))
   (require 'diminish) ; used to hide modeline strings
   (require 'bind-key) ; simplifies how you set keybindings
+  ;; Install packages automatically if not already present on the system
+  (setq use-package-always-ensure t)
 
   ;; TODO: Make this less absolute
   ;; Load the rest of my configuration
