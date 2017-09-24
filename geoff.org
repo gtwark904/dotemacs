@@ -33,3 +33,12 @@ TODO: Make this platform independent
   (setq inhibit-startup-message t)      ; We must disable the startup message
                                         ; for this to work as desired.
 #+END_SRC
+
+* UI/UX
+** Theme
+
+#+BEGIN_SRC emacs-lisp
+  (use-package zenburn-theme
+    :init
+    (load-theme 'zenburn t))
+#+END_SRC
