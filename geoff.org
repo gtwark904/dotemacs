@@ -82,3 +82,14 @@ Make region colors more obvious/jarring.
                       :foreground "black")
                       
 #+END_SRC
+
+* Indentation
+
+Use 2 spaces by default.
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+#+END_SRC
+
+
